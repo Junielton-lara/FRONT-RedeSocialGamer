@@ -1,0 +1,54 @@
+
+
+
+
+    <body>    
+        <div class="container">
+            
+            <div class="content first-content">
+                <div class="first-column">
+                    <h2 class="title title-primary">Bem Vindo</h2>               
+                    <p class="description description-primary">Para se manter conectado com a gente</p>
+                    <p class="description description-primary">por favor faça o login com suas informações pessoais.</p>                      
+                    <button id="signin" class="btn btn-primary" onclick="window.location.href = 'html/home/home.html'">Entrar</button>
+    
+                </div>    
+                <div class="second-column">
+                    <h2 class="title title-second">Criar conta</h2>
+                    <div class="social-media">
+                        <ul class="list-social-media">
+                            <a class="link-social-media" href="#">                            
+                            
+                            </a>
+                        </ul>
+                    </div><!-- social media -->
+                    <p class="description description-second">Informe seus dados para criar conta:</p>
+    
+                //formulario login - email senha
+                    <form>
+                        <label class="label-input" for="">
+                            <i class="far fa-user icon-modify"></i>
+    
+                            Nome: <input type="text" name="nomeuser" id="nomeuser">
+                            <!-- <input type="text" nome ="nome"> -->
+                        </label>
+                        
+                        <label class="label-input" for="">
+                            <i class="far fa-envelope icon-modify"></i>
+                            Email : <input type="text" name="emailuser" id="emailuser">
+                   
+                        </label>
+                        
+                        <label class="label-input" for="">
+                            <i class="fas fa-lock icon-modify"></i>                        
+                       
+                            Senha:  <input type="text" name="senhauser" id="senhauser">
+                        </label>                                        
+            
+                        <button class="btn btn-second" id="criarconta" onclick="criarconta()">Criar conta</button>      
+                    </form>
+                </div><!-- second column -->
+             </div><!-- second-content -->
+        </div>
+        
+    </body>
