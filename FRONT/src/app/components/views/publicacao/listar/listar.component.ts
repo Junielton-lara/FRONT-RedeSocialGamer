@@ -1,6 +1,6 @@
+import { PublicacaoService } from './../../../../services/publicacao.service';
 import { Publicacao } from './../../../../models/publicacao';
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http"
 
 @Component({
   selector: 'app-listarP',
@@ -10,15 +10,14 @@ import { HttpClient } from "@angular/common/http"
 export class ListarComponentPub implements OnInit 
 {
   publis: Publicacao[] = [];
-  constructor(private http: HttpClient) { 
-    http.get<Publicacao[]>("http://localhost:3000/publicacoes/listar").subscribe((posts) =>
-    {
-      this.publis = posts;
-      console.log(this.publis);
-    });
-  }
+  constructor(private service: PublicacaoService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
+    this.service.listar().subscribe((publis)=>{
+      this.publis = publis;
+
+    });
   }
 
 }

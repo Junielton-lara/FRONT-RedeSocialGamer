@@ -1,1 +1,13 @@
-<p>cadastrar works!</p>
+<label for="nome">Nome de usuario</label><br>
+<input type="text" name="nome" [(ngModel)]="usuario.nome"><br>
+<label for="senha">senha do usuario</label><br>
+<input type="text" name="senha" [(ngModel)]="usuario.senha"><br>
+
+
+
+<button (click)="cadastrar()">criar</button>
+
+
+<br>
+
+<a routerLink="/usuarios/listar">Listar usuarios</a>

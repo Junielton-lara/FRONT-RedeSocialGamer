@@ -1,1 +1,28 @@
-<p>listar works!</p>
+<a routerLink="/categorias/criar">Cadastrar categorias</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Gênero Principal</th>
+            <th>Gênero Secundário</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let categoria of categorias">
+            <td>
+                {{ categoria._id }}
+            </td>
+            <td>
+                {{ categoria.nome }}
+            </td>
+            <td>
+                {{ categoria.genero1 }}
+            </td>
+            <td>
+                {{ categoria.genero2 }}
+            </td>
+        </tr>
+    </tbody>
+</table>

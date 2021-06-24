@@ -1,4 +1,0 @@
-Para rodar o projeto 
-ng serve -o
-
-

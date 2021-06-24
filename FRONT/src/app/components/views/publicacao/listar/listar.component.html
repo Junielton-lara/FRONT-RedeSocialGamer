@@ -1,0 +1,9 @@
+<div *ngFor="let publi of publis" class="publi">
+    <div class="card-publi">
+        <span class="nome-usuario">{{publi._id}}</span>
+        <div class="card-conteudo">
+            <span class="card-descri">{{publi.corpo}}</span>
+        </div>
+    </div>
+</div>
+<a routerLink="/publicacoes/postar">Postar publi</a>

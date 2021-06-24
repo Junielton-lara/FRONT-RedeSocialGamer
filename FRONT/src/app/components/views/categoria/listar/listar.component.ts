@@ -1,27 +1,24 @@
 import { Categoria } from './../../../../models/Categoria';
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http"
+import { CategoriaService } from 'src/app/services/categoria.service';
 
 @Component({
   selector: 'app-listarC',
   templateUrl: './listar.component.html',
   styleUrls: ['./listar.component.css']
 })
+
 export class ListarComponentCat implements OnInit 
 {
-  categoria : Categoria[]= [];
-  constructor(private http: HttpClient) 
-  {
-    http.get<Categoria[]>("http://localhost:3000/categorias/listar").subscribe((genero)=>{
-      this.categoria = genero;
-      console.log(this.categoria);
+  categorias : Categoria[] = [];
+  constructor(private service: CategoriaService) {}
 
+  ngOnInit(): void 
+  {
+    this.service.listar().subscribe((categorias)=>{
+      this.categorias = categorias;
 
     });
-
-   }
-
-  ngOnInit(): void {
   }
 
 }

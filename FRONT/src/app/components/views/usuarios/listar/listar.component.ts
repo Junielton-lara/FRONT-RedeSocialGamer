@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { UsuarioService } from './../../../../services/usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from "./../../../../models/Usuario";
 
@@ -11,14 +11,13 @@ export class ListarComponentUsu implements OnInit
 {
 
   usuario : Usuario[] = [];
-  constructor(private http: HttpClient) { 
-    http.get<Usuario[]>("http://localhost:3000/usuarios/listar").subscribe((dados) =>
-    {
-      this.usuario = dados;
-      console.log(this.usuario);
+  constructor(private service: UsuarioService) { }
+  ngOnInit(): void 
+  {
+    this.service.listar().subscribe((usuario)=>{
+      this.usuario = usuario;
+
     });
-  }
-  ngOnInit(): void {
   }
 
   }

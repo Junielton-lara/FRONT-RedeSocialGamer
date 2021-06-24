@@ -1,3 +1,5 @@
+import { PublicacaoService } from './../../../../services/publicacao.service';
+import { Publicacao } from './../../../../models/publicacao';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostarComponent implements OnInit {
 
-  constructor() { }
+  publis: Publicacao = new Publicacao();
 
-  ngOnInit(): void {
+  constructor(private service: PublicacaoService) { }
+
+  ngOnInit(): void {}
+  
+  postar()
+  {
+    this.service.postar(this.publis).subscribe((publis)=>{
+      console.log(publis);
+    });
   }
 
 }

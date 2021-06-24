@@ -1,9 +1,9 @@
 export class Categoria
 {
     _id? : string;
-    nome! : String;
+    nome! : string;
     genero1! : string;
-    genero2? : string;
+    genero2! : string;
 
 
 }

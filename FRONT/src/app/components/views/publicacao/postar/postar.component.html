@@ -1,1 +1,13 @@
-<p>postar works!</p>
+<label for="imagem">URL da imagem</label><br>
+<input type="text" name="imagem" [(ngModel)]="publis.imagem"><br>
+<label for="corpo">Corpo da publicação</label><br>
+<input type="text" name="corpo" [(ngModel)]="publis.corpo"><br>
+
+
+
+<button (click)="postar()">criar</button>
+
+
+<br>
+
+<a routerLink="">listar publi</a>

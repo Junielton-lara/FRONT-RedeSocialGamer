@@ -1,1 +1,14 @@
-<p>criar works!</p>
+<label for="nome">Nome da categoria</label><br>
+<input type="text" name="nome" [(ngModel)]="categoria.nome"><br>
+<label for="genero1">Genero 1 da categoria</label><br>
+<input type="text" name="genero1" [(ngModel)]="categoria.genero1"><br>
+<label for="genero2">Genero 2 da categoria</label><br>
+<input type="text" name="genero2" [(ngModel)]="categoria.genero2"><br>
+
+
+<button (click)="criar()">criar</button>
+
+
+<br>
+
+<a routerLink="/categorias/listar">Listar categorias</a>

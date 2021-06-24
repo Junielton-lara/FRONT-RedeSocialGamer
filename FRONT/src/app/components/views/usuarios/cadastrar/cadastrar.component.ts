@@ -1,3 +1,5 @@
+import { Usuario } from './../../../../models/Usuario';
+import { UsuarioService } from './../../../../services/usuario.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,11 +7,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cadastrar.component.html',
   styleUrls: ['./cadastrar.component.css']
 })
-export class CadastrarComponent implements OnInit {
+export class CadastrarComponent implements OnInit 
+{
+  
+    usuario: Usuario = new Usuario();
 
-  constructor() { }
+  constructor(private service: UsuarioService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  cadastrar()
+  {
+      this.service.cadastrar(this.usuario).subscribe((usuario)=>{
+      console.log(usuario);
+
+    });
   }
 
 }
