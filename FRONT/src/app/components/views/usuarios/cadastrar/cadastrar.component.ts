@@ -9,17 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarComponent implements OnInit 
 {
-  
-    usuario: Usuario = new Usuario();
-
+  nome! : string;
+  email!: string;
+  senha! : string;
   constructor(private service: UsuarioService) { }
 
   ngOnInit(): void { }
 
   cadastrar()
   {
-      this.service.cadastrar(this.usuario).subscribe((usuario)=>{
-      console.log(usuario);
+    let usuario = new Usuario();
+    usuario.nome = this.nome;
+    usuario.email = this.email;
+    usuario.senha = this.senha;
+    this.service.cadastrar(usuario).subscribe((usuario)=>{
+    console.log(usuario);
 
     });
   }

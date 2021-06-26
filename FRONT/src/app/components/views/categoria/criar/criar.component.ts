@@ -9,7 +9,9 @@ import { CategoriaService } from 'src/app/services/categoria.service';
 })
 export class CriarComponent implements OnInit {
 
-  categoria: Categoria = new Categoria();
+  nome! : string;
+  genero1! : string;
+  genero2! : string;
 
   constructor(private service: CategoriaService) { }
 
@@ -17,7 +19,11 @@ export class CriarComponent implements OnInit {
 
   criar(): void
   {
-    this.service.cadastrar(this.categoria).subscribe((categoria)=>{
+    let categoria = new Categoria();
+    categoria.nome = this.nome;
+    categoria.genero1 = this.genero1;
+    categoria.genero2 = this.genero2;
+    this.service.cadastrar(categoria).subscribe((categoria)=>{
       console.log(categoria);
     });
   }

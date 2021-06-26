@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostarComponent implements OnInit {
 
-  publis: Publicacao = new Publicacao();
+  imagem! : String;
+  corpo! : string
 
   constructor(private service: PublicacaoService) { }
 
@@ -17,7 +18,10 @@ export class PostarComponent implements OnInit {
   
   postar()
   {
-    this.service.postar(this.publis).subscribe((publis)=>{
+    let publicacao = new Publicacao();
+    publicacao.imagem = this.imagem;
+    publicacao.corpo = this.corpo;
+    this.service.postar(publicacao).subscribe((publis)=>{
       console.log(publis);
     });
   }
