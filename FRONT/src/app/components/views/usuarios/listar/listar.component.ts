@@ -10,12 +10,12 @@ import { Usuario } from "./../../../../models/Usuario";
 export class ListarComponentUsu implements OnInit 
 {
 
-  usuario : Usuario[] = [];
+  usuarios : Usuario[] = [];
   constructor(private service: UsuarioService) { }
   ngOnInit(): void 
   {
-    this.service.listar().subscribe((usuario)=>{
-      this.usuario = usuario;
+    this.service.listar().subscribe((usuarios)=>{
+      this.usuarios = usuarios;
 
     });
   }

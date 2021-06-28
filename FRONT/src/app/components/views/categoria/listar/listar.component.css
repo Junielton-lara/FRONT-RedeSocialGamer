@@ -10,14 +10,26 @@
 
 .catN {
   display: flex;
+  width: 100%;
 }
-
+.seguir
+{
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
+.botao
+{
+  background-color: #dca927;
+}
 p {
+  display: flex;
   margin-left: 5px;
 }
 
 mat-card {
   margin-top: 10px;
+  display: flex;
   width: 300px;
   height: auto;
   position: relative;

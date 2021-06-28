@@ -8,6 +8,8 @@ import { PostarComponent } from './components/views/publicacao/postar/postar.com
 import { CadastrarComponent } from './components/views/usuarios/cadastrar/cadastrar.component';
 import { ListarComponentUsu } from './components/views/usuarios/listar/listar.component';
 import { ListarPorCategoriaComponent } from './components/views/publicacao/listar-por-categoria/listar-por-categoria.component';
+import { ListarPorAutorComponent } from './components/views/publicacao/listar-por-autor/listar-por-autor.component';
+import { LogarComponent } from './components/views/logar/logar.component';
 
 
 
@@ -34,12 +36,12 @@ const routes: Routes = [
   },
   {
     //Rota para postar publicação
-    path: 'publicacoes/postar',
+    path: 'publicacoes/postar/:id',
     component: PostarComponent
   },
   {
     //Rota para listar publicação
-    path: '',
+    path: ':id',
     component: HomepageComponent
   },
   {
@@ -49,6 +51,14 @@ const routes: Routes = [
   {
     path: 'publicacoes/listar/categoria/:id',
     component: ListarPorCategoriaComponent
+  },
+  {
+    path: 'publicacoes/listar/autor/:id',
+    component: ListarPorAutorComponent
+  },
+  {
+    path: 'usuarios/login',
+    component: LogarComponent
   }
 
 

@@ -11,6 +11,7 @@ import {MatInputModule} from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { AppRoutingModule } from './app-routing.module';
+import {MatExpansionModule} from '@angular/material/expansion';
 import { AppComponent } from './app.component';
 import { PostarComponent } from './components/views/publicacao/postar/postar.component';
 import { ListarComponentPub } from './components/views/publicacao/listar/listar.component';
@@ -25,6 +26,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomepageComponent } from './components/views/publicacao/homepage/homepage.component';
 import { ListarPorCategoriaComponent } from './components/views/publicacao/listar-por-categoria/listar-por-categoria.component';
+import { ListarPorAutorComponent } from './components/views/publicacao/listar-por-autor/listar-por-autor.component';
+import { LogarComponent } from './components/views/logar/logar.component';
 
 
 
@@ -40,7 +43,9 @@ import { ListarPorCategoriaComponent } from './components/views/publicacao/lista
     HeaderComponent,
     ContentComponent,
     HomepageComponent,
-    ListarPorCategoriaComponent
+    ListarPorCategoriaComponent,
+    ListarPorAutorComponent,
+    LogarComponent
   ],
   imports: [
     AppRoutingModule,
@@ -58,6 +63,7 @@ import { ListarPorCategoriaComponent } from './components/views/publicacao/lista
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

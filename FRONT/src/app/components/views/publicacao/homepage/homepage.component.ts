@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PublicacaoService } from 'src/app/services/publicacao.service';
 import { Publicacao } from 'src/app/models/publicacao';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-homepage',
@@ -8,15 +10,19 @@ import { Publicacao } from 'src/app/models/publicacao';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  id = "608c6d66d55ace27f4cb952f";
+  id!: string;
   publis : Publicacao[] = [];
+  private routeSub: Subscription = new Subscription();
   
 
 
 
-  constructor(private service: PublicacaoService) { }
+  constructor(private service: PublicacaoService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.routeSub = this.route.params.subscribe(params =>{
+      this.id = params['id'];
+    });
     this.service.homepage(this.id).subscribe((publicacoes) => {
       this.publis = publicacoes;
     })

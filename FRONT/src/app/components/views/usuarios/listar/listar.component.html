@@ -1,10 +1,15 @@
-<div *ngFor="let usu of usuario" class="publi">
-    <div class="card-publi">
-        <span class="nome-usuario">{{usu._id}}</span>
-        <div class="card-conteudo">
-            <span class="card-descri">{{usu.nome}}</span>
-            <span class="card-descri">{{usu.senha}}</span>
-        </div>
-    </div>
-</div><br>
-<a routerLink="/usuarios/cadastrar">Cadastrar usuarios</a>
+<div class="usu">
+    <mat-card *ngFor="let usuario of usuarios">
+            <mat-card-content>
+                <div >
+                    <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" class="profile">
+                </div>
+                    <a class="link" routerLink="../../publicacoes/listar/autor/{{usuario._id}}">
+                        <h2 class="Nome">{{usuario.nome}}</h2>
+                    </a> 
+                <div class="catN" *ngFor="let categoria of usuario.categoriasSeguidas">
+                    <a class="link" routerLink="../../publicacoes/listar/categoria/{{categoria._id}}">{{categoria.nome}}</a>
+                </div>
+            </mat-card-content>
+    </mat-card>
+</div>

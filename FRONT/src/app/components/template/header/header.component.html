@@ -1,13 +1,29 @@
 <mat-toolbar class="mat-elevation-z4">
-    <a class="link-toolbar" routerLink="">
+    <div class="logo">
+    <a class="link-toolbar" routerLink="{{id}}">
         <img src="https://cutewallpaper.org/21/hive/HIVE-CTC-Software.png" class="imagem-header">
         <span>&nbsp;HIVE</span>
     </a>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-    </button>
+    
+    </div>
+    <div class="botao">
+        <a routerLink="categorias/listar">
+            <button class="btn" mat-button>Procurar</button>
+        </a>
+    </div>
+    <div class="busca">
+        <input type="search" placeholder="Buscar">
+        <button class="botao" type="submit" mat-button>
+            <mat-icon >search</mat-icon>
+        </button>
+    </div>
+    <div class="loginout">
+            <a routerLink="usuarios/login">
+                <button class="btn" mat-button>Login</button>  
+            </a>
+            <a routerLink="">
+                <button class="btn" mat-button (click)="logout()">Logout</button>  
+            </a>
+    </div>
+
 </mat-toolbar>

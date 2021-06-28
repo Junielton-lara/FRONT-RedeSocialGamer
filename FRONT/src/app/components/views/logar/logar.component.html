@@ -1,14 +1,9 @@
 <mat-card>
     <mat-card-content>
         <mat-card class="card">
-            <mat-card-title class="titulo">Cadastro</mat-card-title>
+            <mat-card-title class="titulo">Login</mat-card-title>
             <mat-card-content>
         <div class="usuario">
-            <mat-card-subtitle class="titulo">Nome de usuário</mat-card-subtitle>
-        <mat-form-field class="field">
-            <mat-label for="nome">Nome de usuário</mat-label>
-            <input matInput placeholder="Nome" type="text" name="nome" [(ngModel)]="nome">
-        </mat-form-field>
         <mat-card-subtitle class="titulo">E-mail</mat-card-subtitle>
         <mat-form-field class="field">
             <mat-label for="email">E-mail</mat-label>
@@ -22,8 +17,8 @@
     </div>
     <div class="botoes">
         <mat-card-actions>
-            <button mat-raised-button color="accent" (click)="cadastrar()">Cadastrar</button>
-            <a mat-stroked-button color="warn" routerLink="../listar">Login</a>
+            <button mat-raised-button color="accent" (click)="verificar()">Login</button>
+            <a mat-stroked-button color="warn" routerLink="../usuarios/cadastrar">Cadastrar</a>
         </mat-card-actions>
     </div>
     </mat-card-content>

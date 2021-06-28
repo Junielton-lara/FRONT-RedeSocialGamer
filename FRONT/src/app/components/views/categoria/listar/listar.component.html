@@ -1,17 +1,24 @@
 <div class="cat">
     <mat-card *ngFor="let categoria of categorias">
-        <a class="link" routerLink="../../publicacoes/listar/categoria/{{categoria._id}}">
             <mat-card-content>
+                <a class="link" routerLink="../../publicacoes/listar/categoria/{{categoria._id}}">
                 <img
                     src="https://img.freepik.com/vetores-gratis/console-com-letras-de-jogos-sinal-de-neon-no-fundo-do-tijolo_1262-11854.jpg?size=338&ext=jpg">
                 <div>
-                    <h2 class="Nome">{{ categoria.nome }}</h2>
+                    <h2 class="nome">{{ categoria.nome }}</h2>
                 </div>
                 <div class="catN">
                     <p>{{categoria.genero1}}</p>
                     <p>{{categoria.genero2}}</p>
                 </div>
+                </a>
+                <br>
+                <div class="seguir">
+                        <button class="botao" mat-mini-fab color="accent">
+                            <mat-icon>favorite</mat-icon>
+                        </button>
+                </div>
+                
             </mat-card-content>
-        </a>
     </mat-card>
 </div>

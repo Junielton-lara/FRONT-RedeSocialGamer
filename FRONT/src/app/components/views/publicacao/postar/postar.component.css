@@ -1,3 +1,7 @@
+.tudo
+{
+  display: grid;
+}
 mat-card-content {
   padding: 16px;
 }
@@ -18,11 +22,13 @@ mat-card {
 }
 
 mat-card-title {
-  color: rgb(255, 255, 33);
+  color: #dca927;
+  text-decoration: underline 0.1px;
 }
 
+
 .texto {
-  width: 100%;
+  width: 60%;
 }
 
 .botoes {
@@ -36,4 +42,8 @@ mat-card-title {
   display: flex;
   justify-content: center;
   flex-direction: row;
+}
+
+.card{
+  background-color: #212121;
 }

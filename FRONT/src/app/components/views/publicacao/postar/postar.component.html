@@ -1,6 +1,8 @@
 <mat-card>
-    <mat-card-title class="titulo">Criar uma publicação</mat-card-title>
     <mat-card-content>
+        <mat-card class="card">
+            <mat-card-title class="titulo">Criar uma publicação</mat-card-title>
+            <mat-card-content>
         <mat-card-subtitle>Categoria</mat-card-subtitle>
         <mat-form-field class="categoria">
             <mat-label>Selecione a categoria</mat-label>
@@ -20,6 +22,8 @@
                     </mat-form-field>
                 </div>
             </div>
+ 
+
             <div class="corpo">
                 <mat-card-subtitle>Corpo</mat-card-subtitle>
                 <div class="conteudo-corpo">
@@ -30,11 +34,13 @@
                 </div>
             </div>
         </div>
-    </mat-card-content>
     <div class="botoes">
         <mat-card-actions>
             <button mat-raised-button color="accent" (click)="postar()">Postar</button>
-            <a mat-stroked-button color="warn" routerLink="">Home</a>
+            <a mat-stroked-button color="warn" routerLink="../../../{{id}}">Home</a>
         </mat-card-actions>
     </div>
+</mat-card-content>
+</mat-card>
+</mat-card-content>
 </mat-card>

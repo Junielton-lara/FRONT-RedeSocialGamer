@@ -1,15 +1,61 @@
+.mat-elevation-z4
+{
+  align-items: center;
+}
+
+.botao
+{
+  margin-left: 10px;
+  color: #dca927;
+}
+
+.btn
+{
+  color: #dca927;
+}
+
+.busca
+{
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  color: #dca927;
+}
+
+
+input[type=search]
+{ 
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    background: #cccccc;
+    border:1px solid #000000;
+    width:180px;
+    height: 25px;
+    
+}
+
 .imagem-header {
-  height: 50%;
-  width: 5%;
+  height: auto;
+  width: 45px;
   vertical-align: bottom;
 }
 
 .link-toolbar {
-  color: rgb(255, 255, 33);
+  color: #dca927;
   text-decoration: none;
 }
 
 span {
   text-align: right;
-  font-size: 25pt;
+  font-size: 20pt;
+  font-family: 'Pacifico', cursive;
+}
+
+.link{
+  color: #dca927;
+  text-decoration: none;
 }

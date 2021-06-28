@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  id = localStorage.getItem('_id');
+  constructor(private service: UsuarioService, private router: Router) { }
 
   ngOnInit(): void {
+    console.log(this.id)
+  }
+
+  logout(): void{
+    this.service.logout();
+    console.log(this.id)
   }
 
 }

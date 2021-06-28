@@ -5,7 +5,8 @@ import { Categoria } from 'src/app/models/Categoria';
 import { CategoriaService } from 'src/app/services/categoria.service';
 import { Usuario } from 'src/app/models/Usuario';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-postar',
@@ -19,11 +20,17 @@ export class PostarComponent implements OnInit {
   corpo! : string;
   autor!: Usuario;
   categoria!: Categoria;
-  idCategoria!: string;
+  id!: string;
 
-  constructor(private service: PublicacaoService, private categoriaService: CategoriaService, private snack: MatSnackBar, private router: Router) { }
+  private routeSub: Subscription = new Subscription();
+  
+
+  constructor(private service: PublicacaoService, private categoriaService: CategoriaService, private snack: MatSnackBar, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.routeSub = this.route.params.subscribe(params =>{
+      this.id = params['id'];
+    });
     this.categoriasExistentes();
   }
   
@@ -32,6 +39,7 @@ export class PostarComponent implements OnInit {
     let publicacao = new Publicacao();
     publicacao.imagem = this.imagem;
     publicacao.corpo = this.corpo;
+    this.autor._id = this.id
     publicacao.autor = this.autor;
     publicacao.categoria = this.categoria;
     this.service.postar(publicacao).subscribe((publis)=>{
