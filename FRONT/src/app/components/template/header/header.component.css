@@ -1,0 +1,15 @@
+.imagem-header {
+  height: 50%;
+  width: 5%;
+  vertical-align: bottom;
+}
+
+.link-toolbar {
+  color: rgb(255, 255, 33);
+  text-decoration: none;
+}
+
+span {
+  text-align: right;
+  font-size: 25pt;
+}

@@ -8,18 +8,19 @@ import { Observable } from 'rxjs';
 })
 export class CategoriaService {
 
-  baseURL = "http://localhost:3000/categorias";
+  baseURL = "http://localhost:3000";
 
   constructor(private http: HttpClient) { }
 
   listar(): Observable<Categoria[]>
   {
-    return this.http.get<Categoria[]>(`${this.baseURL}/listar`);
+    return this.http.get<Categoria[]>(`${this.baseURL}/categorias/listar`);
   }
 
   cadastrar(categoria: Categoria): Observable<Categoria>
   {
-    return this.http.post<Categoria>(`${this.baseURL}/criar`, categoria);
+    return this.http.post<Categoria>(`${this.baseURL}/categorias/criar`, categoria);
   }
+
 
 }

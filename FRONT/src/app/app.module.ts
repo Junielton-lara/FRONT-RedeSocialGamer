@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-
+import { MatSliderModule } from '@angular/material/slider';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostarComponent } from './components/views/publicacao/postar/postar.component';
@@ -14,6 +22,9 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { ContentComponent } from './components/template/content/content.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomepageComponent } from './components/views/publicacao/homepage/homepage.component';
+import { ListarPorCategoriaComponent } from './components/views/publicacao/listar-por-categoria/listar-por-categoria.component';
 
 
 
@@ -27,13 +38,26 @@ import { FormsModule } from '@angular/forms';
     CadastrarComponent,
     CriarComponent,
     HeaderComponent,
-    ContentComponent
+    ContentComponent,
+    HomepageComponent,
+    ListarPorCategoriaComponent
   ],
   imports: [
     AppRoutingModule,
     HttpClientModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule,
+    MatSelectModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

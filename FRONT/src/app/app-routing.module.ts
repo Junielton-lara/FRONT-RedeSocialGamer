@@ -1,3 +1,4 @@
+import { HomepageComponent } from './components/views/publicacao/homepage/homepage.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CriarComponent } from './components/views/categoria/criar/criar.component';
@@ -6,6 +7,7 @@ import { ListarComponentPub } from './components/views/publicacao/listar/listar.
 import { PostarComponent } from './components/views/publicacao/postar/postar.component';
 import { CadastrarComponent } from './components/views/usuarios/cadastrar/cadastrar.component';
 import { ListarComponentUsu } from './components/views/usuarios/listar/listar.component';
+import { ListarPorCategoriaComponent } from './components/views/publicacao/listar-por-categoria/listar-por-categoria.component';
 
 
 
@@ -38,7 +40,15 @@ const routes: Routes = [
   {
     //Rota para listar publicação
     path: '',
+    component: HomepageComponent
+  },
+  {
+    path: 'publicacoes/listar',
     component: ListarComponentPub
+  },
+  {
+    path: 'publicacoes/listar/categoria/:id',
+    component: ListarPorCategoriaComponent
   }
 
 

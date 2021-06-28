@@ -8,17 +8,17 @@ import { Usuario } from '../models/Usuario';
 })
 export class UsuarioService {
 
-    baseURL = "http://localhost:3000/usuarios";
+    baseURL = "http://localhost:3000";
   constructor(private http: HttpClient) { }
 
   listar(): Observable<Usuario[]>
   {
-    return this.http.get<Usuario[]>(`${this.baseURL}/listar`);
+    return this.http.get<Usuario[]>(`${this.baseURL}/usuarios/listar`);
   }
 
   cadastrar(usuario: Usuario): Observable<Usuario>
   {
-    return this.http.post<Usuario>(`${this.baseURL}/cadastrar`, usuario);
+    return this.http.post<Usuario>(`${this.baseURL}/usuarios/cadastrar`, usuario);
   }
 
 }

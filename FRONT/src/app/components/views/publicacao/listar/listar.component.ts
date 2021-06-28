@@ -16,7 +16,6 @@ export class ListarComponentPub implements OnInit
   {
     this.service.listar().subscribe((publis)=>{
       this.publis = publis;
-
     });
   }
 

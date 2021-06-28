@@ -8,19 +8,27 @@ import { Observable } from 'rxjs';
 })
 export class PublicacaoService {
 
-  baseURL = "http://localhost:3000/publicacoes";
+  baseURL = "http://localhost:3000";
   
   constructor(private http: HttpClient) { }
 
   listar(): Observable<Publicacao[]>
   {
-    return this.http.get<Publicacao[]>(`${this.baseURL}/listar`);
+    return this.http.get<Publicacao[]>(`${this.baseURL}/publicacoes/listar`);
   }
 
   postar(publicacao: Publicacao): Observable<Publicacao>
   {
-    return this.http.post<Publicacao>(`${this.baseURL}/postar`, publicacao);
+    return this.http.post<Publicacao>(`${this.baseURL}/publicacoes/postar`, publicacao);
   }
 
+  
+  homepage(id: string): Observable<Publicacao[]>{
+    return this.http.get<Publicacao[]>(`${this.baseURL}/${id}`);
+  }
+
+  listarPorCategoria(id: string): Observable<Publicacao[]>{
+    return this.http.get<Publicacao[]>(`${this.baseURL}/publicacoes/listar/categoria/${id}`);
+  }
 
 }

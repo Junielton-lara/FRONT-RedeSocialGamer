@@ -1,1 +1,16 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened fixedInViewport="true" fixedTopGap="64">
+        <mat-nav-list>
+            <a mat-list-item routerLink="">Home</a>
+            <a mat-list-item routerLink="publicacoes/postar">POSTAR</a>
+            <a mat-list-item routerLink="publicacoes/listar">LISTAR</a>
+            <a mat-list-item routerLink="usuarios/cadastrar">CADASTRAR USUARIO</a>
+            <a mat-list-item routerLink="usuarios/listar">LISTAR USUARIO</a>
+            <a mat-list-item routerLink="categorias/criar">CADASTRAR CATEGORIA</a>
+            <a mat-list-item routerLink="categorias/listar">LISTAR CATEGORIA</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

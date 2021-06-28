@@ -1,13 +1,40 @@
-<label for="imagem">URL da imagem</label><br>
-<input type="text" name="imagem" [(ngModel)]="imagem"><br>
-<label for="corpo">Corpo da publicação</label><br>
-<input type="text" name="corpo" [(ngModel)]="corpo"><br>
-
-
-
-<button (click)="postar()">criar</button>
-
-
-<br>
-
-<a routerLink="">listar publi</a>
+<mat-card>
+    <mat-card-title class="titulo">Criar uma publicação</mat-card-title>
+    <mat-card-content>
+        <mat-card-subtitle>Categoria</mat-card-subtitle>
+        <mat-form-field class="categoria">
+            <mat-label>Selecione a categoria</mat-label>
+            <mat-select [(ngModel)]="categoria">
+                <mat-option *ngFor="let categoria of categorias" [value]="categoria.nome">{{categoria.nome}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="imagem-corpo">
+            <div class="imagem">
+                <mat-card-subtitle>Imagem</mat-card-subtitle>
+                <div class="conteudo-imagem">
+                    <mat-form-field class="link">
+                        <mat-label for="imagem">Digite o link da imagem</mat-label>
+                        <input matInput placeholder="http://link.com/imagem" type="url" name="imagem"
+                            [(ngModel)]="imagem">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="corpo">
+                <mat-card-subtitle>Corpo</mat-card-subtitle>
+                <div class="conteudo-corpo">
+                    <mat-form-field class="texto">
+                        <mat-label for="corpo">Digite o texto</mat-label>
+                        <input matInput placeholder="Blá blá blá" type="text" name="corpo" [(ngModel)]="corpo">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <div class="botoes">
+        <mat-card-actions>
+            <button mat-raised-button color="accent" (click)="postar()">Postar</button>
+            <a mat-stroked-button color="warn" routerLink="">Home</a>
+        </mat-card-actions>
+    </div>
+</mat-card>

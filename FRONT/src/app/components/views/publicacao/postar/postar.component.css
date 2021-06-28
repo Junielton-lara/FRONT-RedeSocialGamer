@@ -1,0 +1,39 @@
+mat-card-content {
+  padding: 16px;
+}
+
+mat-grid-tile {
+  width: 100%;
+}
+
+.imagem-corpo {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-right: 8px;
+}
+
+mat-card {
+  background-color: rgb(48, 48, 48);
+}
+
+mat-card-title {
+  color: rgb(255, 255, 33);
+}
+
+.texto {
+  width: 100%;
+}
+
+.botoes {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
