@@ -22,12 +22,15 @@ export class CategoriaService {
     return this.http.post<Categoria>(`${this.baseURL}/categorias/criar`, categoria);
   }
 
-  categoriasSeguidas(id : string | null): Observable<Categoria[]>{
-    return this.http.get<Categoria[]>(`${this.baseURL}/usuarios/categorias/${id}`);
+  listarPorId(id: string): Observable<Categoria>{
+    return this.http.get<Categoria>(`${this.baseURL}/categorias/usuario/listar/${id}`);
   }
 
-  listarPorId(id: string): Observable<Categoria[]>{
-    return this.http.get<Categoria[]>(`${this.baseURL}/categorias/usuario/listar/${id}`);
+  editar(categoria: Categoria): Observable<Categoria>{
+    return this.http.put<Categoria>(`${this.baseURL}/categorias/editar`, categoria);
   }
 
+  deletar(id : string): Observable<Categoria>{
+    return this.http.delete<Categoria>(`${this.baseURL}/categorias/remover/${id}`);
+  }
 }

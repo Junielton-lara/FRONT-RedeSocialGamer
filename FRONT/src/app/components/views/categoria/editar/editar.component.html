@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-card-content>
+        <mat-card class="card">
+            <mat-card-title class="titulo">Editar Categoria</mat-card-title>
+            <mat-card-content>
+        <div class="nome-generos">
+            <mat-card-subtitle>Nome</mat-card-subtitle>
+        <mat-form-field>
+            <mat-label for="nome">{{categoria.nome}}</mat-label>
+            <input matInput placeholder="{{categoria.nome}}" type="text" name="nome" [(ngModel)]="nome">
+        </mat-form-field>
+        <mat-card-subtitle>Gêneros</mat-card-subtitle>
+        <div class="generos">
+        <mat-form-field>
+            <mat-label for="genero1">{{categoria.genero1}}</mat-label>
+            <mat-select [(ngModel)]="genero1">
+                <mat-option *ngFor="let genero of generos" [value]="genero">{{genero}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="genero2">
+            <mat-label for="genero2">{{categoria.genero2}}</mat-label>
+            <mat-select [(ngModel)]="genero2">
+                <mat-option *ngFor="let genero of generos" [value]="genero">{{genero}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    </div>
+    <div class="botoes">
+        <mat-card-actions>
+            <button mat-raised-button color="accent" (click)="editar()">Editar</button>
+            <a mat-stroked-button color="warn" routerLink="../../listar">Categorias</a>
+        </mat-card-actions>
+    </div>
+    </mat-card-content>
+    </mat-card>
+    </mat-card-content>
+</mat-card>

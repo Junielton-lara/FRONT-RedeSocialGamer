@@ -10,6 +10,8 @@ import { ListarComponentUsu } from './components/views/usuarios/listar/listar.co
 import { ListarPorCategoriaComponent } from './components/views/publicacao/listar-por-categoria/listar-por-categoria.component';
 import { ListarPorAutorComponent } from './components/views/publicacao/listar-por-autor/listar-por-autor.component';
 import { LogarComponent } from './components/views/logar/logar.component';
+import { EditarComponent } from './components/views/categoria/editar/editar.component';
+import { RemoverComponent } from './components/views/categoria/remover/remover.component';
 
 
 
@@ -59,6 +61,14 @@ const routes: Routes = [
   {
     path: 'usuarios/login',
     component: LogarComponent
+  },
+  {
+    path: 'categorias/editar/:id',
+    component: EditarComponent
+  },
+  {
+    path: 'categorias/remover/:id',
+    component: RemoverComponent
   }
 
 

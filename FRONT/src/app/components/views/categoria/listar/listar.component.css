@@ -48,3 +48,15 @@ mat-card-content img {
   text-decoration: none;
   color: #fff;
 }
+
+.botaoE
+{
+  color: #dca927;
+  margin-left: 3px;
+}
+
+.botaoD
+{
+  color: red;
+  margin-left: 10px;
+}

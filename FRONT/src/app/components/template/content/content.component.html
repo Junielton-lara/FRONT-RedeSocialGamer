@@ -1,12 +1,30 @@
 <mat-sidenav-container>
     <mat-sidenav mode="side" opened fixedInViewport="true" fixedTopGap="64">
         <mat-nav-list>
-            <a mat-list-item routerLink="{{id}}">Home</a>
-            <a mat-list-item routerLink="publicacoes/postar/{{id}}">POSTAR</a>
-            <a mat-list-item routerLink="publicacoes/listar">LISTAR</a>
-            <a mat-list-item routerLink="usuarios/cadastrar">CADASTRAR USUARIO</a>
-            <a mat-list-item routerLink="usuarios/listar">LISTAR USUARIO</a>
-            <a mat-list-item routerLink="categorias/criar">CADASTRAR CATEGORIA</a>
+            <a mat-list-item routerLink="{{id}}">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <span>&nbsp;Home</span>
+            </a>
+            <a mat-list-item routerLink="publicacoes/postar/{{id}}">
+                <mat-icon mat-list-icon>post_add</mat-icon>
+                <span>&nbsp;POSTAR</span>
+            </a>
+            <a mat-list-item routerLink="publicacoes/listar">
+                <mat-icon mat-list-icon>view_list</mat-icon>
+                <span>&nbsp;LISTAR</span>
+            </a>
+            <a mat-list-item routerLink="usuarios/cadastrar">
+                <mat-icon mat-list-icon>person_add</mat-icon>
+                <span>&nbsp;CADASTRAR USUARIO</span>
+            </a>
+            <a mat-list-item routerLink="usuarios/listar">
+                <mat-icon mat-list-icon>people</mat-icon>
+                <span>&nbsp;LISTAR USUARIO</span>
+            </a>
+            <a mat-list-item routerLink="categorias/criar">
+                <mat-icon mat-list-icon>sports_esports</mat-icon>
+                <span>&nbsp;CADASTRAR CATEGORIA</span> 
+            </a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

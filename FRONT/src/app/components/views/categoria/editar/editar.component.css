@@ -1,0 +1,51 @@
+mat-card-content {
+    padding: 16px;
+  }
+  
+  mat-grid-tile {
+    width: 100%;
+  }
+  
+  .nome-generos {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-right: 8px;
+  }
+  
+  mat-card {
+    background-color: rgb(48, 48, 48);
+  }
+  
+  mat-card-title {
+    color: #dca927;
+    text-decoration: underline 0.1px;
+  }
+  
+  
+  .botoes {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .titulo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .card{
+    background-color: #212121;
+  }
+
+  .generos{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+  }
+
+  .genero2{
+    margin-left: 30px;
+  }

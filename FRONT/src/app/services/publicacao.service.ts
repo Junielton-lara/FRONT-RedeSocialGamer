@@ -34,4 +34,5 @@ export class PublicacaoService {
   listarPorAutor(id: string): Observable<Publicacao[]>{
     return this.http.get<Publicacao[]>(`${this.baseURL}/publicacoes/listar/autor/${id}`);
   }
+
 }

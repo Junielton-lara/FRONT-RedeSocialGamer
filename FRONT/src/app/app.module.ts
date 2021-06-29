@@ -28,6 +28,8 @@ import { HomepageComponent } from './components/views/publicacao/homepage/homepa
 import { ListarPorCategoriaComponent } from './components/views/publicacao/listar-por-categoria/listar-por-categoria.component';
 import { ListarPorAutorComponent } from './components/views/publicacao/listar-por-autor/listar-por-autor.component';
 import { LogarComponent } from './components/views/logar/logar.component';
+import { EditarComponent } from './components/views/categoria/editar/editar.component';
+import { RemoverComponent } from './components/views/categoria/remover/remover.component';
 
 
 
@@ -45,7 +47,9 @@ import { LogarComponent } from './components/views/logar/logar.component';
     HomepageComponent,
     ListarPorCategoriaComponent,
     ListarPorAutorComponent,
-    LogarComponent
+    LogarComponent,
+    EditarComponent,
+    RemoverComponent
   ],
   imports: [
     AppRoutingModule,
